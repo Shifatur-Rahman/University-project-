@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    padding: 0 10%;
+}
+
+
+nav{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 50px 0 100px; */
+}
+
+nav .logo>a{
+    font-size: 25px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+nav .menu-btn i{
+    color: red;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+}
+
+nav ul li{
+padding: 0 50px;
+}
+
+nav ul li a{
+color: black;
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;
+letter-spacing: 1px;
+transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #95a5a6;
+}
+
+#click{
+    display: none;
+}
+
+ /* Second Div = Content */
+
+.content{
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left_content{
+  width: 55%;
+  height: 100%;
+}
+
+.left_content img{
+    width: 80%;
+    /* height: auto; */
+}
+
+.right_content{
+  width: 45%;
+  padding: 0 70px 0 0;
+}
+
+.right_content h3{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.right_content p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.spa{
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1400px){
+
+    .container{
+        padding: 0 5%;
+    }
+
+    nav ul li{
+        padding: 0 20px;
+        }
+
+        .right_content{
+            padding: 0;
+          }
+
+}
+
+
+
+@media (max-width:940px){
+nav .menu-btn i{
+        display: block;
+    }
+
+#click:checked ~ ul{
+    left: 0%;
+    }
+
+    #click:checked ~ .menu-btn i:before{
+   content: "\f00d";
+    }
+nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background: #111;
+    display: block;
+    text-align: center;
+    padding: 0;
+    transition: all 0.4s ease;
+}
+nav ul li{
+    margin: 60px 0;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    display: block;
+}
+.search_bar{
+    display: none;
+}
+
+.left_content img{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Second Div = Content */
+.content{
+    display: block;
+}
+.left_content{
+    width: 100%;
+    height: auto;
+}
+
+.left_content img{
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.right_content{
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+}
